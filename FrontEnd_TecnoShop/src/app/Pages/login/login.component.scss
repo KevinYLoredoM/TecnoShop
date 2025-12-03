@@ -1,0 +1,148 @@
+// Variables
+$primary-color: #2563eb;
+$navbar-bg: #1f2937;
+$text-nav: #f3f4f6;
+$primary-color: #2563eb; 
+$bg-body: #ebebeb;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $bg-body;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+// --- NAVBAR LIMPIO ---
+.navbar {
+  background-color: $navbar-bg;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; // Clave para separar logo y links
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+  .nav-brand a {
+    color: $text-nav;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+    a {
+      color: $text-nav;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      
+      &:hover { color: black; text-decoration: underline; }
+    }
+    
+    .active-link { 
+      font-weight: bold; 
+      color: black;
+    }
+
+    .btn-registro {
+      border: 1px solid $text-nav;
+      padding: 5px 12px;
+      border-radius: 4px;
+      &:hover {
+        background-color: $text-nav;
+        color: $navbar-bg; // Texto amarillo al hacer hover
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// --- CARD LOGIN ---
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; 
+  padding: 20px;
+}
+
+.card-login {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  width: 100%;
+  max-width: 400px;
+  border-top: 4px solid $primary-color; 
+
+  .header-login {
+    text-align: center;
+    margin-bottom: 2rem;
+    h2 { color: #1f2937; margin-bottom: 0.5rem; }
+    p { color: #6b7280; font-size: 0.9rem; }
+  }
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-weight: 500;
+  }
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    &:focus {
+        outline: none;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.1);
+    }
+  }
+  .error { color: #dc2626; font-size: 0.75rem; margin-top: 0.25rem; }
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.875rem;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover { background-color: darken($primary-color, 10%); }
+  &:disabled { background-color: #9ca3af; cursor: not-allowed; }
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}

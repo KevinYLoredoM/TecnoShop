@@ -1,0 +1,127 @@
+<!-- NAVBAR SUPERIOR -->
+<nav class="navbar">
+  <!-- 1. Logo -->
+  <div class="nav-brand">
+    <a routerLink="/home">💻 TecnoShop</a>
+  </div>
+
+  <!-- 2. Buscador (Solo visible en Home) -->
+  <div class="search-container">
+    <div class="search-box">
+      <input 
+        type="text" 
+        placeholder="Buscar productos, marcas y más..." 
+        [(ngModel)]="filtroTexto"
+        (keyup.enter)="aplicarFiltros()"
+      >
+      <button class="search-btn" (click)="aplicarFiltros()">🔍</button>
+    </div>
+  </div>
+
+  <!-- 3. Enlaces -->
+  <div class="nav-links">
+    <a routerLink="/login">Iniciar Sesion</a>
+    <a routerLink="/registrar" class="btn-registro">Regístrarse</a>
+  </div>
+</nav>
+
+<!-- LAYOUT PRINCIPAL -->
+<div class="main-container">
+
+  <!-- SIDEBAR (FILTROS) -->
+  <aside class="sidebar">
+    
+    <!-- Filtro Categorías -->
+    <div class="filter-group">
+      <h3>Categorías</h3>
+      <ul>
+        <li 
+          *ngFor="let cat of categorias" 
+          [class.active]="categoriaSeleccionada === cat"
+          (click)="seleccionarCategoria(cat)">
+          {{ cat }}
+          <span *ngIf="categoriaSeleccionada === cat">✖</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Filtro Marcas -->
+    <div class="filter-group">
+      <h3>Marcas</h3>
+      <ul>
+        <li 
+          *ngFor="let m of marcas"
+          [class.active]="marcaSeleccionada === m"
+          (click)="seleccionarMarca(m)">
+          {{ m }}
+          <span *ngIf="marcaSeleccionada === m">✖</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Botón Limpiar -->
+    <button class="btn-clear" (click)="limpiarTodo()" *ngIf="categoriaSeleccionada || marcaSeleccionada || filtroTexto">
+      Limpiar Filtros 🗑️
+    </button>
+  </aside>
+
+  <!-- LISTA DE PRODUCTOS (GRID) -->
+  <section class="catalog-section">
+    
+    <!-- Loader -->
+    <div class="loading-state" *ngIf="cargando">
+      <div class="spinner"></div>
+      <p>Cargando catálogo...</p>
+    </div>
+
+    <!-- Sin Resultados -->
+    <div class="empty-state" *ngIf="!cargando && productos.length === 0">
+      <h3>No encontramos productos 😢</h3>
+      <p>Intenta con otra búsqueda o filtro.</p>
+      <button (click)="limpiarTodo()">Ver todos</button>
+    </div>
+
+    <!-- Grid de Tarjetas -->
+    <div class="product-grid" *ngIf="!cargando && productos.length > 0">
+      
+      <div class="card-producto" *ngFor="let prod of productos">
+        
+        <!-- Imagen (La primera de la lista) -->
+        <div class="card-img-wrapper">
+          <img 
+            [src]="prod.ImgUrl && prod.ImgUrl.length > 0 ? prod.ImgUrl[0] : '../../Images/Productos/{prod.Nombre}.png'"
+            [alt]="prod.Nombre"
+          >
+        </div>
+
+        <div class="card-body">
+          <span class="marca">{{ prod.Marca }}</span>
+          
+          <h2 class="titulo" [title]="prod.Nombre">
+            {{ prod.Nombre }}
+          </h2>
+
+          <div class="price-section">
+            <span class="precio">
+              {{ prod.PrecioVenta | currency:'MXN':'symbol':'1.0-0' }}
+            </span>
+            <span class="envio" *ngIf="prod.PrecioVenta > 499">Envío gratis ⚡</span>
+          </div>
+
+          <!-- Descripción corta -->
+          <p class="desc">{{ prod.Descripcion }}</p>
+
+          <div class="stock-info" *ngIf="prod.Stock > 0">
+            Disponibles: {{ prod.Stock }}
+          </div>
+          <div class="stock-info agotado" *ngIf="prod.Stock === 0">
+            Agotado
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<app-inferior></app-inferior>

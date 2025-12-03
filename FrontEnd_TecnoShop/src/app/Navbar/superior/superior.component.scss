@@ -1,0 +1,57 @@
+$primary-color: #2563eb;
+$nav-bg: #1f2937;
+$text-light: #f3f4f6;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $nav-bg;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  .nav-brand {
+    a {
+      color: $text-light;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    a {
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: white;
+      }
+
+      &.active {
+        color: $primary-color;
+      }
+    }
+
+    .btn-registro {
+      background-color: $primary-color;
+      color: white !important;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

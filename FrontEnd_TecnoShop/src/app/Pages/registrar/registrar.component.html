@@ -1,0 +1,82 @@
+<app-superior></app-superior>
+
+<div class="registro-container">
+  <div class="card-registro">
+    <h2>Crear Cuenta en TecnoShop</h2>
+    <p class="subtitle">Únete para comprar las mejores laptops y componentes</p>
+
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Fila de Nombres y Apellidos -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombres">Nombres</label>
+          <input type="text" id="nombres" formControlName="nombres" placeholder="Ej. Juan">
+          <div class="error" *ngIf="registroForm.get('nombres')?.touched && registroForm.get('nombres')?.errors?.['required']">
+            El nombre es obligatorio.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apellidos" formControlName="apellidos" placeholder="Ej. Pérez">
+          <div class="error" *ngIf="registroForm.get('apellidos')?.touched && registroForm.get('apellidos')?.errors?.['required']">
+            El apellido es obligatorio.
+          </div>
+        </div>
+      </div>
+
+      <!-- Correo -->
+      <div class="form-group">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" formControlName="correo" placeholder="usuario@ejemplo.com">
+        <div class="error" *ngIf="registroForm.get('correo')?.touched && registroForm.get('correo')?.errors?.['email']">
+          Ingresa un correo válido.
+        </div>
+      </div>
+
+      <!-- Teléfono -->
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" formControlName="telefono" placeholder="Ej. 5512345678">
+        <div class="error" *ngIf="registroForm.get('telefono')?.touched && registroForm.get('telefono')?.errors?.['pattern']">
+          Solo se permiten números.
+        </div>
+      </div>
+
+      <!-- Contraseñas -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" formControlName="contrasena" placeholder="******">
+          <div class="error" *ngIf="registroForm.get('contrasena')?.touched && registroForm.get('contrasena')?.errors?.['minlength']">
+            Mínimo 6 caracteres.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmarContrasena">Confirmar Contraseña</label>
+          <input type="password" id="confirmarContrasena" formControlName="confirmarContrasena" placeholder="******">
+          <div class="error" *ngIf="registroForm.hasError('mismatch') && registroForm.get('confirmarContrasena')?.touched">
+            Las contraseñas no coinciden.
+          </div>
+        </div>
+      </div>
+
+      <!-- Mensaje de error general -->
+      <div class="alert-error" *ngIf="mensajeError">
+        {{ mensajeError }}
+      </div>
+
+      <button type="submit" [disabled]="registroForm.invalid || cargando" class="btn-submit">
+        {{ cargando ? 'Registrando...' : 'Registrarme' }}
+      </button>
+
+      <div class="login-link">
+        ¿Ya tienes cuenta? <a routerLink="/login">Inicia Sesión</a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-inferior></app-inferior>
