@@ -1,30 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\",
+  "WorkspaceRootPath": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsgestorusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsgestorcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsgestorusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsgestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,75 +34,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 329,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClsProductos.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsProductos.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsProductos.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsProductos.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T07:17:03.877Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClsGestorProductos.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAADwvw0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T07:17:16.268Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T07:52:25.698Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ClsUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsUsuarios.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsUsuarios.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsUsuarios.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsUsuarios.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T16:46:00.373Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ClsGestorUsuarios.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAADwvz0AAABPAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwFIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T17:15:49.583Z",
               "IsPinned": true,
@@ -110,17 +52,87 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAswCgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T16:44:58.189Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsCarrito.cs",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAYwAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T05:45:47.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClsGestorCarrito.cs",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T05:50:35.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CarritoController.cs",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwDkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T06:18:37.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Web.config",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Web.config",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-03T15:00:17.464Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
