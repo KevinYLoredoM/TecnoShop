@@ -26,9 +26,8 @@ go
 select * from categorias
 select * from usuarios
 select * from productos
-select * from carrito
-exec Productos_ADD 'pc','gaming','moderna',120,100,10,1,1,''
-exec sp_agregarCarrito 6,1,2
+ exec Productos_ADD 'lap','azus','moderna',120,100,10,1,1,''
+exec sp_agregarCarrito 6,2,2
 ---------------------------------------------------------------|
 --este procedimiento es para actualizar el carrito             |
 ---------------------------------------------------------------|
@@ -58,7 +57,7 @@ begin
 end
 go
 
-exec sp_carritoEliminar 4,1
+exec sp_carritoEliminar 7,1
 
 --------------------------------------------------------------|
 --este procedimiento es para vaciar el carrito                |
@@ -73,7 +72,7 @@ end
 go
 
 select * from carrito
-exec sp_vaciarCarrito 4
+exec sp_vaciarCarrito 6
 
 ----------------------------------------------------------------------|
 --este procedimiento va mostrar los productos del carrito del usuario |

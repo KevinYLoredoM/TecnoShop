@@ -48,7 +48,7 @@ namespace BackEnd_TecnoShop.Models
 
         public bool agregarCarrito(ClsCarrito carrito)
         {
-            
+
             bool res = false;
             using (SqlConnection conn = new SqlConnection(strconn))
             {
@@ -60,7 +60,7 @@ namespace BackEnd_TecnoShop.Models
                 cmd.Parameters.AddWithValue("@usuId", carrito.idUsuario);
                 cmd.Parameters.AddWithValue("@proId", carrito.idProducto);
                 cmd.Parameters.AddWithValue("@cantidad", carrito.cantidad);
-           
+
                 try
                 {
                     conn.Open();
@@ -81,5 +81,107 @@ namespace BackEnd_TecnoShop.Models
                 return res;
             }
         }
+        public bool actualizarCarrito(ClsCarrito carrito)
+        {
+            bool res = false;
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                cmd.CommandText = "sp_carritoActualizarCantidad";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@usuId", carrito.idUsuario);
+                cmd.Parameters.AddWithValue("@proId", carrito.idProducto);
+                cmd.Parameters.AddWithValue("@cantidad", carrito.cantidad);
+              
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    res = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    res = false;
+                    throw;
+                }
+                finally
+                {
+                    cmd.Parameters.Clear();
+                    conn.Close();
+                }
+            }
+            return res;
+        }
+
+        public bool eliminarCarrito(ClsCarrito carrito)
+        {
+            bool res = false;
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                cmd.CommandText = "sp_carritoEliminar";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@usuId", carrito.idUsuario);
+                cmd.Parameters.AddWithValue("@proId", carrito.idProducto);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    res = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    res = false;
+                    throw;
+                }
+                finally
+                {
+                    cmd.Parameters.Clear();
+                    conn.Close();
+                }
+            }
+            return res;
+        }
+
+        public bool vaciarCarrito(ClsCarrito carrito)
+        {
+            bool res = false;
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                cmd.CommandText = "sp_vaciarCarrito";
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@usuId", carrito.idUsuario);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    res = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    res = false;
+                    throw;
+                }
+                finally
+                {
+                    cmd.Parameters.Clear();
+                    conn.Close();
+                }
+            }
+            return res;
+        }
     }
 }
+   
