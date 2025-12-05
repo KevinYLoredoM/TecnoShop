@@ -58,12 +58,24 @@ namespace BackEnd_TecnoShop.Models
                     string marca = r.GetString(11);
                     string logoUrl = r.GetString(12);
                     string imgUrl = r.GetString(13);
-
-                    // Convertir string → List<string>
-                    List<string> listaImg = imgUrl.Split(',').ToList();
+                    List<string> listImg;
+                    
+                    // 2. CONVERSIÓN CRÍTICA: Convertir string separado por comas a List<string>
+                    if (!string.IsNullOrWhiteSpace(imgUrl))
+                    {
+                        // Dividir por coma y limpiar posibles espacios o saltos de línea
+                        listImg = imgUrl
+                            .Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+                            .Select(s => s.Trim()) // Limpia espacios alrededor de la URL
+                            .ToList();
+                    }
+                    else
+                    {
+                        listImg = new List<string>(); // Lista vacía si no hay imagen
+                    }
 
                     ClsProductos productos = new ClsProductos(id, nombre, descripcion, especificaciones, precioVenta, precioCompra,
-                        stock, categoriaid, categoria, activo, marcaid, marca, logoUrl, listaImg);
+                        stock, categoriaid, categoria, activo, marcaid, marca, logoUrl, listImg);
 
                     ListProductos.Add(productos);
                 }

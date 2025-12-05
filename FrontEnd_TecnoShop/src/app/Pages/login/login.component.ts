@@ -5,6 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../Service/auth.service';
 import { SuperiorComponent } from '../../Navbar/superior/superior.component';
 import { InferiorComponent } from '../../Navbar/inferior/inferior.component';
+import { Usuario } from '../../Models/models';
 
 @Component({
   selector: 'app-login',
@@ -42,12 +43,26 @@ export class LoginComponent {
     const { correo, contrasena } = this.loginForm.value;
 
     this.authService.login(correo, contrasena).subscribe({
-      next: (usuarioRecibido) => {
+      next: (usuarioRecibido: Usuario) => { // Tipamos el usuario recibido
         // Login exitoso
         console.log('Usuario logueado:', usuarioRecibido);
         this.authService.guardarSesion(usuarioRecibido); // Guardar en localStorage
+
+        // --- LÓGICA DE REDIRECCIÓN POR ROL (CLAVE) ---
+        if (usuarioRecibido.rol === 1) {
+          // Rol 1: Administrador (Ej: CRUD de productos, usuarios)
+          this.router.navigate(['/src/app/PagesAdmin/dashboard/']); 
+        } else if (usuarioRecibido.rol === 2) {
+          // Rol 2: Cliente (Ej: Catálogo, Compras)
+          // Usamos '/home' que es el catálogo no logueado, o podrías crear '/catalogo-logueado'
+          this.router.navigate(['/src/app/PagesLogeado/catalogo/']); 
+        } else {
+          // Rol desconocido
+          this.router.navigate(['/home']);
+        }
+        // --- FIN LÓGICA DE REDIRECCIÓN ---
+
         this.cargando = false;
-        this.router.navigate(['/src/app/PagesLogeado/catalogo/']); // Redirigir al inicio
       },
       error: (err) => {
         // Error de credenciales (401)

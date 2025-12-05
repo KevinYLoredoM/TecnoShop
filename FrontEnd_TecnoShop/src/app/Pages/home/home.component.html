@@ -29,41 +29,38 @@
 <div class="main-container">
 
   <!-- SIDEBAR (FILTROS) -->
-  <aside class="sidebar">
-    
-    <!-- Filtro Categorías -->
-    <div class="filter-group">
-      <h3>Categorías</h3>
-      <ul>
-        <li 
-          *ngFor="let cat of categorias" 
-          [class.active]="categoriaSeleccionada === cat"
-          (click)="seleccionarCategoria(cat)">
-          {{ cat }}
-          <span *ngIf="categoriaSeleccionada === cat">✖</span>
-        </li>
-      </ul>
-    </div>
+<aside class="sidebar">
+  
+  <!-- Filtro Categorías -->
+  <div class="filter-group">
+    <h3>Categorías</h3>
+    <ul>
+      <li 
+        *ngFor="let cat of categorias" 
+        [class.active]="categoriaSeleccionada === cat"
+        (click)="seleccionarCategoria(cat)">
+        
+        {{ cat }}
+        <span *ngIf="categoriaSeleccionada === cat">✖</span>
+      </li>
+    </ul>
+  </div>
 
-    <!-- Filtro Marcas -->
-    <div class="filter-group">
-      <h3>Marcas</h3>
-      <ul>
-        <li 
-          *ngFor="let m of marcas"
-          [class.active]="marcaSeleccionada === m"
-          (click)="seleccionarMarca(m)">
-          {{ m }}
-          <span *ngIf="marcaSeleccionada === m">✖</span>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Botón Limpiar -->
-    <button class="btn-clear" (click)="limpiarTodo()" *ngIf="categoriaSeleccionada || marcaSeleccionada || filtroTexto">
-      Limpiar Filtros 🗑️
-    </button>
-  </aside>
+  <!-- Filtro Marcas -->
+  <div class="filter-group">
+    <h3>Marcas</h3>
+    <ul>
+      <li 
+        *ngFor="let m of marcas"
+        [class.active]="marcaSeleccionada === m"
+        (click)="seleccionarMarca(m)">
+        
+        {{ m }}
+        <span *ngIf="marcaSeleccionada === m">✖</span>
+      </li>
+    </ul>
+  </div>
+</aside>
 
   <!-- LISTA DE PRODUCTOS (GRID) -->
   <section class="catalog-section">
@@ -89,9 +86,10 @@
         <!-- Imagen (La primera de la lista) -->
         <div class="card-img-wrapper">
           <img 
-            [src]="prod.ImgUrl && prod.ImgUrl.length > 0 ? prod.ImgUrl[0] : '../../Images/Productos/{prod.Nombre}.png'"
+            [src]="'../../Images/Productos' + prod.ImgUrl[0] && prod.ImgUrl.length > 0 ? prod.ImgUrl[0] : 'assets/no-image.png'" 
             [alt]="prod.Nombre"
-          >
+            (error)="prod.ImgUrl[0] = 'assets/no-image.png'"
+>
         </div>
 
         <div class="card-body">

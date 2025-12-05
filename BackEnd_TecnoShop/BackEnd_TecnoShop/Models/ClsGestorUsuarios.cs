@@ -59,7 +59,7 @@ namespace BackEnd_TecnoShop.Models
                 cmd.Parameters.AddWithValue("@correo", usuarios.correo);
                 cmd.Parameters.AddWithValue("@contrasena", hashContrasena);
                 cmd.Parameters.AddWithValue("@telefono", usuarios.telefono);
-                cmd.Parameters.AddWithValue("@rolUsuario", /*2*/ usuarios.rol);
+                cmd.Parameters.AddWithValue("@rolUsuario", 2);
 
                 try
                 {

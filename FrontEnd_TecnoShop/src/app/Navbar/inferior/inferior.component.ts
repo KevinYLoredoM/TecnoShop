@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-inferior',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './inferior.component.html',
-  styleUrl: './inferior.component.scss'
+  styleUrls: ['./inferior.component.scss']
 })
 export class InferiorComponent {
-
 }

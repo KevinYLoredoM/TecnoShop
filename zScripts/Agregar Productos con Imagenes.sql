@@ -1,4 +1,5 @@
 
+CREATE PROC Productos_ADD
 	@Nombre NVARCHAR(100),
 	@Descripcion NVARCHAR(255),
 	@Especificaciones NVARCHAR(MAX),
@@ -8,6 +9,19 @@
 	@CategoriaId INT,
 	@MarcaId INT,
 	@ImgUrl NVARCHAR(MAX)
+AS
+BEGIN
+	-- Insertar producto
+	INSERT INTO productos (
+		pro_nombre, pro_descripcion, pro_especificaciones,
+		pro_precioVenta, pro_precioCompra, pro_stock,
+		pro_catId, pro_marId, pro_activo, pro_imgUrl )
+	VALUES (
+		@Nombre, @Descripcion, @Especificaciones,
+		@PrecioVenta, @PrecioCompra, @Stock,
+		@CategoriaId, @MarcaId, 1, @ImgUrl );
+END;
+
 
 exec Productos_ADD 'Laptop Gamer Xpg Xenia 15', 'I7-11800h 32gb 1tb Ssd Rtx 3070', 'Especificaciones principales:
 • Procesador: Intel Core i7-11800H (8 núcleos / 16 hilos)
