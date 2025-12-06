@@ -153,6 +153,7 @@
     <Compile Include="Controllers\CarritoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ResenaController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,8 +162,10 @@
     <Compile Include="Models\ClsCarrito.cs" />
     <Compile Include="Models\ClsGestorCarrito.cs" />
     <Compile Include="Models\ClsGestorProductos.cs" />
+    <Compile Include="Models\ClsGestorResenas.cs" />
     <Compile Include="Models\ClsGestorUsuarios.cs" />
     <Compile Include="Models\ClsProductos.cs" />
+    <Compile Include="Models\ClsResenas.cs" />
     <Compile Include="Models\ClsUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
