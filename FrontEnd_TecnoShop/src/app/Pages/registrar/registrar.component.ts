@@ -78,14 +78,14 @@ export class RegistrarComponent {
       correo: this.registroForm.value.correo,
       telefono: this.registroForm.value.telefono,
       contrasena: this.registroForm.value.contrasena,
-      rol: 2 // Asignamos rol 2 por defecto (ej. Cliente), ya que el backend lo requiere
+      rol: 2
     };
 
     this.authService.registrarUsuario(nuevoUsuario).subscribe({
       next: () => {
         alert('Usuario registrado con éxito');
         this.cargando = false;
-        this.router.navigate(['/login']); // Redirigir al login después del registro
+        this.router.navigate(['/login']);
       },
       error: (err) => {
         console.error('Error al registrar:', err);

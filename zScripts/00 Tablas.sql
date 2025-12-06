@@ -60,6 +60,8 @@ create table usuarios(
 )
 go
 
+exec sp_usuariosMostrarClienteALL2
+
 -- 6. Direcciones (Usa la clave foránea a 'ciudades')
 create table direcciones(
     dir_id int identity primary key,

@@ -29,12 +29,13 @@ namespace BackEnd_TecnoShop.Models
                 while (r.Read())
                 {
                     ClsUsuarios usuario = new ClsUsuarios();
-                    usuario.id = Convert.ToInt32(r["usu_id"]);
-                    usuario.nombres = r["usu_nombres"].ToString();
-                    usuario.apellidos = r["usu_apellidos"].ToString();
-                    usuario.correo = r["usu_correo"].ToString();
-                    usuario.contrasena = r["usu_contrasena"].ToString();
-                    usuario.telefono = r["usu_telefono"].ToString();
+                    usuario.id = r.GetInt32(0);
+                    usuario.nombres = r.GetString(1);
+                    usuario.apellidos = r.GetString(2);
+                    usuario.correo = r.GetString(3);
+                    usuario.contrasena = r.GetString(4);
+                    usuario.telefono = r.GetString(5);
+                    usuario.rol = r.GetInt32(6);
 
                     ListUsuarios.Add(usuario);
                 }
@@ -59,7 +60,7 @@ namespace BackEnd_TecnoShop.Models
                 cmd.Parameters.AddWithValue("@correo", usuarios.correo);
                 cmd.Parameters.AddWithValue("@contrasena", hashContrasena);
                 cmd.Parameters.AddWithValue("@telefono", usuarios.telefono);
-                cmd.Parameters.AddWithValue("@rolUsuario", 2);
+                cmd.Parameters.AddWithValue("@rolUsuario", usuarios.rol);
 
                 try
                 {

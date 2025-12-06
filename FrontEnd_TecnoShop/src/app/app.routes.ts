@@ -1,10 +1,15 @@
 import { Routes } from '@angular/router';
-//Paginas Sin Loguear
+// Paginas Sin Loguear
 import { LoginComponent } from './Pages/login/login.component';
 import { RegistrarComponent } from './Pages/registrar/registrar.component';
 import { HomeComponent } from './Pages/home/home.component';
+
+// Paginas Con Logueado
 import { CatalogoComponent } from './PagesLogeado/catalogo/catalogo.component';
-//Paginas Con Logueado
+import { DashboardComponent } from './PagesAdmin/dashboard/dashboard.component';
+
+// Importar el Guard (Asegúrate que la ruta sea correcta)
+import { AuthGuard } from './Service/auth.guard';
 
 export const routes: Routes = [
     {
@@ -22,11 +27,26 @@ export const routes: Routes = [
         component: HomeComponent,
         title: 'TecnoShop - Inicio'
     },
+    
+    // --- RUTAS PROTEGIDAS ---
     {
-        path: 'Catalogo',
+        // Ruta para CLIENTES (Rol 2)
+        path: 'catalogo',  // Cambiado a minúsculas por convención
         component: CatalogoComponent,
-        title: 'TecnoShop - Catalogo'
+        title: 'TecnoShop - Catalogo',
+        canActivate: [AuthGuard], // <--- Bloquea acceso si no está logueado
+        data: { roles: [2] }      // <--- Solo permite Rol 2
     },
+    {
+        // Ruta para ADMINISTRADORES (Rol 1)
+        path: 'dashboard', // Cambiado a minúsculas
+        component: DashboardComponent,
+        title: 'Admin - Dashboard',
+        canActivate: [AuthGuard], // <--- Bloquea acceso si no está logueado
+        data: { roles: [1] }      // <--- Solo permite Rol 1
+    },
+
+    // --- REDIRECCIONES ---
     { 
         path: '',
         pathMatch: 'full',

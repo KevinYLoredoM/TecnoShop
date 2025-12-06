@@ -42,17 +42,17 @@ begin
 end
 ------------------------------------------------------------------------------------------------------
 --este procedimiento me va mostrar todos los usuarios(CLIENTES)
-CREATE proc sp_usuariosMostrarClienteALL
+ALTER proc sp_usuariosMostrarClienteALL
 as
 begin
-	select usu_id, usu_nombres, usu_apellidos, usu_correo, usu_contrasena, usu_telefono
+	select usu_id, usu_nombres, usu_apellidos, usu_correo, usu_contrasena, usu_telefono, usu_rolId
 	from usuarios where usu_rolId = 2
 end
 
-create proc sp_usuariosMostrarClienteALL2
+alter proc sp_usuariosMostrarClienteALL2
 as
 begin
-	select usu_id, usu_nombres, usu_apellidos, usu_correo, usu_contrasena, usu_telefono
+	select usu_id, usu_nombres, usu_apellidos, usu_correo, usu_contrasena, usu_telefono, usu_rolId
 	from usuarios
 end
 

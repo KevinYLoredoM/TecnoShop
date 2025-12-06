@@ -43,29 +43,26 @@ export class LoginComponent {
     const { correo, contrasena } = this.loginForm.value;
 
     this.authService.login(correo, contrasena).subscribe({
-      next: (usuarioRecibido: Usuario) => { // Tipamos el usuario recibido
-        // Login exitoso
-        console.log('Usuario logueado:', usuarioRecibido);
-        this.authService.guardarSesion(usuarioRecibido); // Guardar en localStorage
+      next: (usuarioRecibido: Usuario) => { 
+        // 1. Guardar sesión
+        this.authService.guardarSesion(usuarioRecibido); 
 
-        // --- LÓGICA DE REDIRECCIÓN POR ROL (CLAVE) ---
+        // 2. Lógica de Redirección
+        // NOTA: Las rutas aquí deben coincidir con las definidas en app.routes.ts
         if (usuarioRecibido.rol === 1) {
-          // Rol 1: Administrador (Ej: CRUD de productos, usuarios)
-          this.router.navigate(['/src/app/PagesAdmin/dashboard/']); 
+          // Rol 1: Administrador
+          this.router.navigate(['/admin']); 
         } else if (usuarioRecibido.rol === 2) {
-          // Rol 2: Cliente (Ej: Catálogo, Compras)
-          // Usamos '/home' que es el catálogo no logueado, o podrías crear '/catalogo-logueado'
-          this.router.navigate(['/src/app/PagesLogeado/catalogo/']); 
+          // Rol 2: Cliente -> Redirige al Catálogo
+          this.router.navigate(['/catalogo']); 
         } else {
-          // Rol desconocido
+          // Rol desconocido o default
           this.router.navigate(['/home']);
         }
-        // --- FIN LÓGICA DE REDIRECCIÓN ---
 
         this.cargando = false;
       },
       error: (err) => {
-        // Error de credenciales (401)
         console.error('Error de login', err);
         this.mensajeError = 'Correo o contraseña incorrectos.';
         this.cargando = false;
