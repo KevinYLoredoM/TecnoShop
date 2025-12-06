@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\carritocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsgestorcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorcarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsgestorusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clscarrito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
@@ -38,7 +38,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ClsGestorUsuarios.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorUsuarios.cs",
@@ -52,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "ClsCarrito.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsCarrito.cs",
@@ -83,13 +83,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ClsGestorCarrito.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorCarrito.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAAAKgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T05:50:35.553Z",
               "EditorCaption": ""
@@ -100,9 +100,9 @@
               "Title": "CarritoController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
-              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\CarritoController.cs*",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\CarritoController.cs*",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAwHoAAAArAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\proyecto\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\CarritoController.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAwHMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T06:18:37.783Z",
               "EditorCaption": ""
