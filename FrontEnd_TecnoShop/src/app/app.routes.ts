@@ -14,6 +14,7 @@ import { DashboardComponent } from './PagesAdmin/dashboard/dashboard.component';
 import { CarritoComponent } from './PagesLogeado/carrito/carrito.component';
 import { PerfilComponent } from './PagesLogeado/perfil/perfil.component';
 import { AdminProductosComponent } from './PagesAdmin/admin-productos/admin-productos.component';
+import { AdminPerfilComponent } from './PagesAdmin/admin-perfil/admin-perfil.component';
 
 export const routes: Routes = [
     {
@@ -39,7 +40,7 @@ export const routes: Routes = [
         component: CatalogoComponent,
         title: 'TecnoShop - Catalogo',
         canActivate: [AuthGuard],
-        data: { roles: [2] }
+        data: { roles: [2, 1] }
     },
     {
         path: 'perfil',
@@ -55,6 +56,7 @@ export const routes: Routes = [
         canActivate: [AuthGuard],
         data: { roles: [2] }
     },
+
     {
         // Ruta para ADMINISTRADORES (Rol 1)
         path: 'dashboard',
@@ -72,8 +74,8 @@ export const routes: Routes = [
     },
     {
         path: 'admin-perfil',
-        component: AdminProductosComponent,
-        title: 'Admin - Productos',
+        component: AdminPerfilComponent,
+        title: 'Admin - Perfil',
         canActivate: [AuthGuard],
         data: { roles: [1] }
     },
