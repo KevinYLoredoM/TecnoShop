@@ -2,12 +2,12 @@
   "name": "front-end-tecno-shop",
   "version": "0.0.0",
   "scripts": {
-  "ng": "ng",
-  "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0&& ng serve",
-  "build": "ng build",
-  "watch": "ng build --watch --configuration development",
-  "test": "ng test"
-},
+    "ng": "ng",
+    "start": "set NODE_TLS_REJECT_UNAUTHORIZED=0&& ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
   "private": true,
   "dependencies": {
     "@angular/common": "^19.2.0",
@@ -19,6 +19,7 @@
     "@angular/platform-server": "^19.2.0",
     "@angular/router": "^19.2.0",
     "@angular/ssr": "^19.2.17",
+    "@stripe/stripe-js": "^8.5.3",
     "bootstrap": "^5.3.8",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",

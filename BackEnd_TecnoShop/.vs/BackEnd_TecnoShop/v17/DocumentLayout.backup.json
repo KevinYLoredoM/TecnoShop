@@ -3,53 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsgestorventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\resenacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\resenacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsgestorresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\models\\clsresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsresenas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\resenacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\resenacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\imagenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\imagenescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\models\\clsgestorventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\ventacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\felix\\onedrive\\escritorio\\proyecto2.0\\tecnoshop\\backend_tecnoshop\\backend_tecnoshop\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\pagoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,100 +46,67 @@
       "DocumentGroups": [
         {
           "DockedHeight": 329,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
-=======
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Web.config",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Web.config",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADkAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-07T05:52:44.735Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
->>>>>>> Stashed changes
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "PagosController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\PagosController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\PagosController.cs",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\PagosController.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\PagosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwD8AAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T00:29:43.36Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "VentaController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\VentaController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\VentaController.cs",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\VentaController.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\VentaController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T00:18:35.517Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ClsGestorVenta.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorVenta.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorVenta.cs",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorVenta.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorVenta.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAQwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T00:16:15.136Z",
-=======
-              "DocumentIndex": 1,
-              "Title": "ImagenesController.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ImagenesController.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\ImagenesController.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ImagenesController.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\ImagenesController.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T14:58:05.165Z",
->>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ClsVenta.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsVenta.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsVenta.cs",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsVenta.cs",
               "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsVenta.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvxwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T00:12:20.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
@@ -165,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ResenaController.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ResenaController.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\ResenaController.cs",
@@ -178,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "ClsGestorResenas.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorResenas.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorResenas.cs",
@@ -191,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "ClsResenas.cs",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsResenas.cs",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsResenas.cs",
@@ -204,28 +158,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
               "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Web.config",
               "ToolTip": "C:\\Users\\felix\\OneDrive\\Escritorio\\Proyecto2.0\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Web.config",
               "RelativeToolTip": "BackEnd_TecnoShop\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-12-08T23:29:10.103Z",
               "EditorCaption": ""
-=======
-              "DocumentIndex": 2,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\TecnoShop\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\UsuariosController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T05:52:44.334Z",
-              "EditorCaption": ""
->>>>>>> Stashed changes
             }
           ]
         },
