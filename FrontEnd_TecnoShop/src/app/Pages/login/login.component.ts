@@ -46,6 +46,8 @@ export class LoginComponent {
       next: (usuarioRecibido: Usuario) => {
         this.authService.guardarSesion(usuarioRecibido); 
 
+        // --- AGREGA ESTO PARA VER QUÉ ENVÍAS ---
+        console.log('Intentando Login con:', { correo, contrasena, usuarioRecibido });
         if (usuarioRecibido.rol === 1) {
           // Rol 1: Administrador
           this.router.navigate(['/dashboard']); 

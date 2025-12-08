@@ -35,7 +35,8 @@ namespace BackEnd_TecnoShop.Models
                     usuario.correo = r.GetString(3);
                     usuario.contrasena = r.GetString(4);
                     usuario.telefono = r.GetString(5);
-                    usuario.rol = r.GetInt32(6);
+                    int roll = r.GetInt32(6);
+                    usuario.rol = roll;
 
                     ListUsuarios.Add(usuario);
                 }
@@ -95,6 +96,8 @@ namespace BackEnd_TecnoShop.Models
                 if (passwordValido)
                 {
                     usuarioEncontrado.contrasena = "";
+                    int rol = usuarioEncontrado.rol;
+
                     return usuarioEncontrado;
                 }
             }
