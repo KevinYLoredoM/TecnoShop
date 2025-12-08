@@ -1,8 +1,9 @@
-import { Injectable, inject } from '@angular/core';
+import { Injectable, inject, PLATFORM_ID } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Usuario } from '../Models/models';
 import { Router } from '@angular/router'; // Importar Router
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,9 @@ export class AuthService {
   
   private apiUrl = 'https://localhost:44308/api/usuarios';
   private http = inject(HttpClient);
-  private router = inject(Router); // Inyectar Router para redirigir al salir
+  private router = inject(Router);
+  // Inyectamos el identificador de plataforma para saber si estamos en server o browser
+  private platformId = inject(PLATFORM_ID);
 
   constructor() { }
 
@@ -25,16 +28,21 @@ export class AuthService {
   }
 
   guardarSesion(usuario: Usuario) {
-    localStorage.setItem('usuarioSesion', JSON.stringify(usuario));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('usuarioSesion', JSON.stringify(usuario));
+    }
   }
 
   // --- NUEVOS MÉTODOS ---
 
   // Obtener el usuario actual desde LocalStorage
   get usuarioActual(): Usuario | null {
-    const userJson = localStorage.getItem('usuarioSesion');
-    if (userJson) {
-      return JSON.parse(userJson);
+    // Solo leemos si estamos en el navegador
+    if (isPlatformBrowser(this.platformId)) {
+      const userJson = localStorage.getItem('usuarioSesion');
+      if (userJson) {
+        return JSON.parse(userJson);
+      }
     }
     return null;
   }
@@ -46,7 +54,9 @@ export class AuthService {
 
   // Cerrar sesión
   logout() {
-    localStorage.removeItem('usuarioSesion');
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.removeItem('usuarioSesion');
+    }
     this.router.navigate(['/login']);
   }
 }

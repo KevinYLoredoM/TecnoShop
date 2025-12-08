@@ -1,4 +1,8 @@
 import { Routes } from '@angular/router';
+
+// Importar el Guard (Asegúrate que la ruta sea correcta)
+import { AuthGuard } from './Service/auth.guard';
+
 // Paginas Sin Loguear
 import { LoginComponent } from './Pages/login/login.component';
 import { RegistrarComponent } from './Pages/registrar/registrar.component';
@@ -7,11 +11,16 @@ import { HomeComponent } from './Pages/home/home.component';
 // Paginas Con Logueado
 import { CatalogoComponent } from './PagesLogeado/catalogo/catalogo.component';
 import { DashboardComponent } from './PagesAdmin/dashboard/dashboard.component';
-
-// Importar el Guard (Asegúrate que la ruta sea correcta)
-import { AuthGuard } from './Service/auth.guard';
+import { CarritoComponent } from './PagesLogeado/carrito/carrito.component';
+import { PerfilComponent } from './PagesLogeado/perfil/perfil.component';
+import { AdminProductosComponent } from './PagesAdmin/admin-productos/admin-productos.component';
 
 export const routes: Routes = [
+    {
+        path: 'home',
+        component: HomeComponent,
+        title: 'TecnoShop - Inicio'
+    },
     {
         path: 'login',
         component: LoginComponent,
@@ -22,28 +31,51 @@ export const routes: Routes = [
         component: RegistrarComponent,
         title: 'TecnoShop - Crear Cuenta'
     },
-    {
-        path: 'home',
-        component: HomeComponent,
-        title: 'TecnoShop - Inicio'
-    },
     
     // --- RUTAS PROTEGIDAS ---
     {
         // Ruta para CLIENTES (Rol 2)
-        path: 'catalogo',  // Cambiado a minúsculas por convención
+        path: 'catalogo',
         component: CatalogoComponent,
         title: 'TecnoShop - Catalogo',
-        canActivate: [AuthGuard], // <--- Bloquea acceso si no está logueado
-        data: { roles: [2] }      // <--- Solo permite Rol 2
+        canActivate: [AuthGuard],
+        data: { roles: [2] }
+    },
+    {
+        path: 'perfil',
+        component: PerfilComponent,
+        title: 'TecnoShop - Mi Perfil',
+        canActivate: [AuthGuard],
+        data: { roles: [2] }
+    },
+    {
+        path: 'carrito',
+        component: CarritoComponent,
+        title: 'TecnoShop - Carrito',
+        canActivate: [AuthGuard],
+        data: { roles: [2] }
     },
     {
         // Ruta para ADMINISTRADORES (Rol 1)
-        path: 'dashboard', // Cambiado a minúsculas
+        path: 'dashboard',
         component: DashboardComponent,
         title: 'Admin - Dashboard',
-        canActivate: [AuthGuard], // <--- Bloquea acceso si no está logueado
-        data: { roles: [1] }      // <--- Solo permite Rol 1
+        canActivate: [AuthGuard],
+        data: { roles: [1] }
+    },
+    {
+        path: 'admin-productos',
+        component: AdminProductosComponent,
+        title: 'Admin - Productos',
+        canActivate: [AuthGuard],
+        data: { roles: [1] }
+    },
+    {
+        path: 'admin-perfil',
+        component: AdminProductosComponent,
+        title: 'Admin - Productos',
+        canActivate: [AuthGuard],
+        data: { roles: [1] }
     },
 
     // --- REDIRECCIONES ---
@@ -54,6 +86,6 @@ export const routes: Routes = [
     },
     { 
         path: '**',
-        redirectTo: 'home'
+        redirectTo: '#'
     }
 ];

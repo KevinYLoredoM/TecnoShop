@@ -163,7 +163,11 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CarritoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Controllers\PagosController.cs" />
+=======
+    <Compile Include="Controllers\ImagenesController.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Controllers\ResenaController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -203,6 +207,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ImagenesProductos\Laptop Gamer Xpg Xenia 15\01.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />

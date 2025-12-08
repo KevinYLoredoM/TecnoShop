@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { ProductoService } from '../../Service/productos.service';
 import { Producto } from '../../Models/models';
 import { InferiorComponent } from '../../Navbar/inferior/inferior.component';
+import { SuperiorComponent } from '../../Navbar/superior/superior.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, InferiorComponent],
+  imports: [CommonModule, RouterModule, FormsModule, SuperiorComponent, InferiorComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -17,9 +18,9 @@ export class HomeComponent implements OnInit {
   
   private productoService = inject(ProductoService);
   
-  // URL base donde residen las imágenes en tu servidor C# (AJUSTA ESTO SI ES NECESARIO)
-  readonly IMAGE_BASE_URL = 'local'; // EJEMPLO: Si tu API expone las imágenes en esta ruta
-  
+  // ⚠️ CAMBIA ESTO POR EL PUERTO REAL DE TU API
+  private apiUrlBase = 'https://localhost:44308';
+
   productos: Producto[] = [];
   categorias: string[] = [];
   marcas: string[] = [];
@@ -34,28 +35,7 @@ export class HomeComponent implements OnInit {
     this.cargarProductos();
   }
 
-  // NUEVA FUNCIÓN: Construye la URL completa de la imagen
-  getImagenUrl(producto: Producto): string {
-    const defaultImage = 'assets/no-image.png';
-    
-    if (!producto.ImgUrl || producto.ImgUrl.length === 0) {
-      return defaultImage;
-    }
-    
-    const relativePath = producto.ImgUrl[0];
-
-    // Si la ruta es absoluta (empieza con http), la usamos directamente
-    if (relativePath.startsWith('http')) {
-      return relativePath;
-    }
-
-    // Si la ruta es relativa (como "/Laptop Xenia/01.png"), concatenamos la base
-    // Usamos replace(/\s/g, '') si tu Web API no soporta espacios en las URLs
-    // Dejaremos la ruta sin modificar para ser más fieles a tu backend, asumiendo que funciona
-    return `${this.IMAGE_BASE_URL}${relativePath.replace(/\\/g, '/')}`; // Reemplaza \ por /
-
-  }
-
+  // ... (Tus funciones de cargarProductos, extraerFiltros, aplicarFiltros quedan IGUAL) ...
   cargarProductos() {
     this.cargando = true;
     this.productoService.getProductos().subscribe({
@@ -65,7 +45,7 @@ export class HomeComponent implements OnInit {
         this.cargando = false;
       },
       error: (err) => {
-        console.error('Error al cargar productos:', err, 'Asegúrate de que la API y la ruta de la imagen sean correctas.');
+        console.error('Error al cargar productos:', err);
         this.cargando = false;
       }
     });

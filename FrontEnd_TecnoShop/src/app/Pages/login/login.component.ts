@@ -43,15 +43,12 @@ export class LoginComponent {
     const { correo, contrasena } = this.loginForm.value;
 
     this.authService.login(correo, contrasena).subscribe({
-      next: (usuarioRecibido: Usuario) => { 
-        // 1. Guardar sesión
+      next: (usuarioRecibido: Usuario) => {
         this.authService.guardarSesion(usuarioRecibido); 
 
-        // 2. Lógica de Redirección
-        // NOTA: Las rutas aquí deben coincidir con las definidas en app.routes.ts
         if (usuarioRecibido.rol === 1) {
           // Rol 1: Administrador
-          this.router.navigate(['/admin']); 
+          this.router.navigate(['/dashboard']); 
         } else if (usuarioRecibido.rol === 2) {
           // Rol 2: Cliente -> Redirige al Catálogo
           this.router.navigate(['/catalogo']); 

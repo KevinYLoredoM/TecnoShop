@@ -1,57 +1,143 @@
 $primary-color: #2563eb;
 $nav-bg: #1f2937;
 $text-light: #f3f4f6;
+$text-muted: #9ca3af;
+$white: #ffffff;
+$text-dark: #333;
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $nav-bg;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 0.8rem 2rem; // Reduje un poco el padding vertical
+  gap: 1.5rem; // Espacio entre logo, buscador y botones
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
+  // 1. Marca
   .nav-brand {
+    flex-shrink: 0; // Evita que el logo se aplaste
     a {
-      color: $text-light;
       font-size: 1.5rem;
       font-weight: bold;
+      color: white;
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      white-space: nowrap; // No romper línea
     }
   }
 
-  .nav-links {
+  // 2. BUSCADOR (Tu código integrado y ajustado)
+  .search-container {
+    flex-grow: 1;
     display: flex;
-    gap: 1.5rem;
+    justify-content: center;
+    max-width: 600px; // Limite para que no sea excesivamente ancha
+    margin: 0 auto;   // Centrado horizontalmente
+
+    .search-box {
+      width: 100%;
+      display: flex;
+      background: $white;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      border-radius: 4px; // Un poco más redondeado
+      overflow: hidden;   // Para que el boton no salga del borde
+
+      input {
+        flex-grow: 1;
+        border: none;
+        padding: 8px 15px;
+        font-size: 0.95rem;
+        outline: none;
+        color: $text-dark;
+        
+        &::placeholder { color: #9ca3af; }
+      }
+
+      .search-btn {
+        background: $white;
+        border: none;
+        padding: 0 15px;
+        cursor: pointer;
+        border-left: 1px solid #e6e6e6;
+        transition: background 0.2s;
+        
+        &:hover { background: #f3f4f6; }
+      }
+    }
+  }
+
+  // 3. Enlaces y Panel Usuario
+  .nav-links, .nav-actions {
+    flex-shrink: 0; // No se aplastan
+    display: flex;
     align-items: center;
+    gap: 1.5rem;
 
     a {
-      color: #9ca3af;
+      color: $text-muted;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
-
-      &:hover {
-        color: white;
-      }
-
-      &.active {
-        color: $primary-color;
-      }
+      
+      &:hover { color: white; }
+      &.active { color: $primary-color; }
     }
-
+    
+    // Boton especial registro
     .btn-registro {
-      background-color: $primary-color;
-      color: white !important;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: darken($primary-color, 10%);
-      }
+        background-color: $primary-color;
+        color: white !important;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        &:hover { background-color: darken($primary-color, 10%); }
     }
+  }
+
+  // Panel usuario logueado
+  .user-panel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-left: 1px solid #374151;
+    padding-left: 1.5rem;
+
+    .user-name {
+      color: $text-light;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      color: $text-muted;
+      cursor: pointer;
+      &:hover { color: white; }
+      &.logout-btn:hover { color: #ef4444; }
+    }
+  }
+}
+
+// Ocultar elementos en pantallas pequeñas para que quepa el buscador
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-wrap: wrap; // Permite que baje si no cabe
+    
+    .search-container {
+        order: 3; // Manda el buscador abajo del logo y botones en movil
+        width: 100%;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+    
+    .desktop-only {
+        display: none; // Oculta nombre y links de texto en movil
+    }
+    
+    .nav-brand { margin-right: auto; }
   }
 }
