@@ -9,14 +9,13 @@ using System.Web.Http.Cors;
 
 namespace BackEnd_TecnoShop.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "GET, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, POST, DELETE, PUT, OPTIONS")]
     public class ProductosController : ApiController
     {
         // GET: api/Productos
         [HttpGet]
         [Route("api/Productos")]
         public IEnumerable<ClsProductos> Get()
-        
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
             return GesProductos.GetProductos("", "", "");

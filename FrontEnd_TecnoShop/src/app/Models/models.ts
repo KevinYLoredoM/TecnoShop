@@ -34,3 +34,14 @@ export interface Producto {
   LogoUrl: string;
   ImgUrl: string[]; // Tu backend envía una lista de strings
 }
+
+export interface CarritoItem {
+  idCarrito?: number;
+  idUsuario: number;
+  idProducto: number;
+  cantidad: number;
+  proNombre?: string;
+  precio?: number;
+  subtotal?: number;
+  fecha?: string;
+}

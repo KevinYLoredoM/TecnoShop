@@ -9,7 +9,7 @@ using BackEnd_TecnoShop.Models;
 
 namespace BackEnd_TecnoShop.Controllers
 {
-    [EnableCors(origins: "*", headers:"*", methods:"GET, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers:"*", methods:"GET, POST, DELETE, PUT, OPTIONS")]
     public class UsuariosController : ApiController
     {
         // GET: api/Usuarios

@@ -8,7 +8,7 @@ using System.Web.Http.Cors;
 using BackEnd_TecnoShop.Models;
 namespace BackEnd_TecnoShop.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "GET, POST, DELETE, OPTIONS")]
+    [EnableCors(origins: "*", headers: "*", methods: "GET, POST, DELETE, PUT, OPTIONS")]
 
     public class CarritoController : ApiController
     {

@@ -9,9 +9,11 @@ using System.Net;
 using System.Net.Http;
 using System.Numerics;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace BackEnd_TecnoShop.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "GET, POST, DELETE, PUT, OPTIONS")]
     public class VentaController : ApiController
     {
         ClsGestorVenta gestor = new ClsGestorVenta();

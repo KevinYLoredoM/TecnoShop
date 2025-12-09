@@ -1,5 +1,92 @@
 <app-superior></app-superior>
-<br>
-<p>Catalogo</p>
-<br>
+
+<div class="main-container">
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <h3>Filtros</h3>
+      <button *ngIf="categoriaSeleccionada || marcaSeleccionada" (click)="limpiarFiltros()" class="btn-clear">
+        Limpiar
+      </button>
+    </div>
+
+    <div class="filter-group">
+      <h4>Categorías</h4>
+      <ul>
+        <li *ngFor="let cat of categorias" 
+            [class.active]="categoriaSeleccionada === cat"
+            (click)="seleccionarCategoria(cat)">
+          {{ cat }}
+          <span *ngIf="categoriaSeleccionada === cat">✖</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="filter-group">
+      <h4>Marcas</h4>
+      <ul>
+        <li *ngFor="let m of marcas"
+            [class.active]="marcaSeleccionada === m"
+            (click)="seleccionarMarca(m)">
+          {{ m }}
+          <span *ngIf="marcaSeleccionada === m">✖</span>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+  <section class="catalog-section">
+    
+    <div class="state-msg" *ngIf="cargando">
+      <div class="spinner"></div>
+      <p>Cargando catálogo...</p>
+    </div>
+
+    <div class="state-msg" *ngIf="!cargando && productosFiltrados.length === 0">
+      <h3>No encontramos resultados 😢</h3>
+      <p>Prueba ajustando los filtros o tu búsqueda.</p>
+      <button (click)="limpiarFiltros()" class="btn-primary">Ver todo</button>
+    </div>
+
+    <div class="product-grid" *ngIf="!cargando && productosFiltrados.length > 0">
+      
+      <div class="card-producto" *ngFor="let prod of productosFiltrados">
+  
+  <div class="card-img-wrapper" [routerLink]="['/detalle', prod.Id]" style="cursor: pointer">
+    <img 
+      [src]="obtenerImagen(prod)" 
+      [alt]="prod.Nombre"
+      (error)="manejarErrorImagen($event)"
+    >
+  </div>
+
+  <div class="card-body">
+    <span class="marca">{{ prod.Marca }}</span>
+    
+    <h2 class="titulo" [routerLink]="['/detalle', prod.Id]" style="cursor: pointer">
+      {{ prod.Nombre }}
+    </h2>
+
+    <div class="price-row">
+      <span class="precio">{{ prod.PrecioVenta | currency:'MXN' }}</span>
+    </div>
+
+    <div class="card-actions">
+      
+      <button class="btn-detail" [routerLink]="['/detalle', prod.Id]">
+        Ver Detalle
+      </button>
+      
+      <button class="btn-add" (click)="agregarAlCarrito(prod)">
+        🛒 Agregar
+      </button>
+
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+</div>
+
 <app-inferior></app-inferior>

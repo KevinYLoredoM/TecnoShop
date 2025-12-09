@@ -2,6 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Producto } from '../Models/models';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +27,18 @@ export class ProductoService {
     if (nombre) params = params.set('Nombre', nombre);
 
     return this.http.get<Producto[]>(`${this.apiUrl}/Filtro`, { params });
+  }
+
+  // Agrega este método a tu ProductoService existente
+  getProductoById(id: number): Observable<Producto> {
+  // Como tu API actual devuelve TODOS, filtramos en el cliente por ahora.
+  // Lo ideal sería tener un endpoint api/productos/{id} en el backend.
+    return this.http.get<Producto[]>('https://localhost:44308/api/Productos').pipe(
+      map((productos: Producto[]) => {
+        const encontrado = productos.find(p => p.Id == id);
+        if (!encontrado) throw new Error('Producto no encontrado');
+        return encontrado;
+      })
+    );
   }
 }

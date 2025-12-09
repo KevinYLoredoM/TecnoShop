@@ -24,11 +24,8 @@ export class SuperiorComponent implements OnInit {
 
   ngOnInit(): void {
     this.usuario = this.authService.usuarioActual;
-
-    // 1. Verificar ruta inicial al cargar
     this.verificarRuta(this.router.url);
 
-    // 2. Suscribirse a cambios de ruta (Cada vez que navegues)
     this.router.events.pipe(
       filter((event: Event): event is NavigationEnd => event instanceof NavigationEnd)
     ).subscribe((event: NavigationEnd) => {
@@ -36,35 +33,37 @@ export class SuperiorComponent implements OnInit {
     });
   }
 
-  // Lógica para decidir si mostramos el buscador
   verificarRuta(url: string): void {
-    // Limpiamos la url de parámetros (ej: /catalogo?buscar=pc -> /catalogo)
     const rutaLimpia = url.split('?')[0];
-
-    // Definimos dónde SÍ queremos el buscador
     const rutasPermitidas = ['/home', '/catalogo', '/'];
-
-    // Condición final:
     this.mostrarBuscador = rutasPermitidas.includes(rutaLimpia);
   }
 
-  get esAdmin(): boolean {
-    return this.usuario?.rol === 1;
-  }
+  get esAdmin(): boolean { return this.usuario?.rol === 1; }
+  get esCliente(): boolean { return this.usuario?.rol === 2; }
 
-  get esCliente(): boolean {
-    return this.usuario?.rol === 2;
-  }
-
+  // --- AQUI ESTA EL CAMBIO IMPORTANTE ---
   aplicarFiltros(): void {
-    if (this.filtroTexto.trim()) {
-      this.router.navigate(['/catalogo'], { queryParams: { buscar: this.filtroTexto } });
+    const texto = this.filtroTexto.trim();
+    
+    // Obtenemos la ruta actual sin parámetros (ej: '/home')
+    const rutaActual = this.router.url.split('?')[0];
+
+    // Configuración de navegación
+    const queryParams = texto ? { buscar: texto } : {}; // Si está vacío, quita el param
+
+    if (rutaActual === '/home') {
+      // Si estoy en home, me quedo en home y actualizo la URL
+      this.router.navigate(['/home'], { queryParams: queryParams });
+    } else {
+      // Si estoy en catalogo O cualquier otro lado, voy a catalogo
+      this.router.navigate(['/catalogo'], { queryParams: queryParams });
     }
   }
 
   cerrarSesion(): void {
     this.authService.logout();
     this.usuario = null;
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home']);
   }
 }

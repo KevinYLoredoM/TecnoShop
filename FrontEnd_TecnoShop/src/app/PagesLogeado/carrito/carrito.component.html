@@ -1,1 +1,101 @@
-<p>carrito works!</p>
+<app-superior></app-superior>
+
+<div class="cart-wrapper">
+  
+  <div class="cart-items-section">
+    <div class="cart-header">
+      <h2>Detalle Carrito</h2>
+      <button routerLink="/catalogo" class="btn-seguir">🛒 Seguir Comprando</button>
+    </div>
+    
+    <div *ngIf="cargando" class="loading">Cargando carrito...</div>
+
+    <div class="empty-cart" *ngIf="!cargando && items.length === 0">
+      <p>Tu carrito está vacío 😢</p>
+      <button routerLink="/catalogo">Ir al catálogo</button>
+    </div>
+
+    <div class="items-list" *ngIf="!cargando && items.length > 0">
+      
+      <div class="cart-card" *ngFor="let item of items">
+        
+        <div class="card-img">
+          <img [src]="obtenerImagen(item.proNombre)" (error)="manejarErrorImagen($event)" alt="Producto">
+        </div>
+
+        <div class="card-info">
+          <h3>{{ item.proNombre }}</h3>
+          <span class="sku">TecnoShop Product</span>
+        </div>
+
+        <div class="card-price">
+          {{ item.precio | currency:'MXN' }} MXN
+        </div>
+
+        <div class="card-qty">
+          <button (click)="cambiarCantidad(item, -1)">−</button>
+          <input type="text" [value]="item.cantidad" readonly>
+          <button (click)="cambiarCantidad(item, 1)">+</button>
+        </div>
+
+        <div class="card-action">
+            <button class="btn-delete" (click)="eliminarItem(item)">
+             🗑 Eliminar
+            </button>
+        </div>
+      </div>
+
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span class="amount">{{ total | currency:'MXN' }}</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cart-shipping-section">
+    <h3>Detalle Envio</h3>
+    
+    <form class="shipping-form">
+      <div class="form-group">
+        <label>Departamento:</label>
+        <select><option>Seleccionar</option></select>
+      </div>
+
+      <div class="form-group">
+        <label>Provincia:</label>
+        <select><option>Seleccionar</option></select>
+      </div>
+
+      <div class="form-group">
+        <label>Distrito:</label>
+        <select><option>Seleccionar</option></select>
+      </div>
+
+      <div class="form-group">
+        <label>Nombre Contacto:</label>
+        <input type="text" placeholder="Ej: Juan Perez">
+      </div>
+
+      <div class="form-group">
+        <label>Direccion:</label>
+        <input type="text" placeholder="Calle, Número, Colonia">
+      </div>
+
+      <div class="form-group">
+        <label>Telefono:</label>
+        <input type="tel" placeholder="123 456 7890">
+      </div>
+
+      <div class="total-summary">
+        Total: {{ total | currency:'MXN' }}
+      </div>
+
+      <button type="button" class="btn-checkout">
+        💳 Terminar y Procesar Pago
+      </button>
+    </form>
+  </div>
+</div>
+
+<app-inferior></app-inferior>

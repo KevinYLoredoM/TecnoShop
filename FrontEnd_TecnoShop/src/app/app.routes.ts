@@ -15,6 +15,7 @@ import { CarritoComponent } from './PagesLogeado/carrito/carrito.component';
 import { PerfilComponent } from './PagesLogeado/perfil/perfil.component';
 import { AdminProductosComponent } from './PagesAdmin/admin-productos/admin-productos.component';
 import { AdminPerfilComponent } from './PagesAdmin/admin-perfil/admin-perfil.component';
+import { DetalleProductoComponent } from './PagesLogeado/detalle-producto/detalle-producto.component';
 
 export const routes: Routes = [
     {
@@ -55,6 +56,13 @@ export const routes: Routes = [
         title: 'TecnoShop - Carrito',
         canActivate: [AuthGuard],
         data: { roles: [2] }
+    },
+    {
+        path: 'detalle/:id',
+        component: DetalleProductoComponent,
+        title: 'TecnoShop - Detalle del Producto',
+        canActivate: [AuthGuard],
+        data: { roles: [2, 1] }
     },
 
     {

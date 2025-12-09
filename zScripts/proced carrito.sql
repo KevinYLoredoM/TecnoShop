@@ -43,7 +43,7 @@ end
 go
 
 select * from carrito
-exec sp_carritoActualizarCantidad 4,1,2
+exec sp_carritoActualizarCantidad 7,1,3
 -------------------------------------------------------------|
 --este procedimiento es para eliminar carrito                |
 -------------------------------------------------------------|

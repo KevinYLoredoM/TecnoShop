@@ -1,0 +1,84 @@
+<app-superior></app-superior>
+
+<div class="page-wrapper">
+
+  <div class="loading-container" *ngIf="cargando">
+    <div class="spinner"></div>
+    <p>Cargando detalles...</p>
+  </div>
+
+  <div class="detalle-card" *ngIf="!cargando && producto">
+    
+    <div class="col-img">
+      <div class="main-image-wrapper">
+        <img [src]="imagenSeleccionada" [alt]="producto.Nombre" (error)="manejarErrorImagen($event)">
+      </div>
+    </div>
+
+    <div class="col-info">
+      <span class="brand-tag">{{ producto.Marca }}</span>
+      
+      <h1 class="prod-title">{{ producto.Nombre }}</h1>
+      
+      <div class="rating-box">
+        <span class="stars">★★★★☆</span>
+        <span class="text">(4.5) basado en reseñas</span>
+      </div>
+
+      <div class="price-tag">
+        {{ producto.PrecioVenta | currency:'MXN':'symbol':'1.2-2' }} MXN
+      </div>
+
+      <div class="info-block">
+        <h3>Descripción</h3>
+        <p>{{ producto.Descripcion }}</p>
+      </div>
+
+      <div class="info-block" *ngIf="producto.Especificaciones">
+        <h3>Especificaciones</h3>
+        <p class="specs-text">{{ producto.Especificaciones }}</p>
+      </div>
+
+      <div class="stock-status">
+        <span *ngIf="producto.Stock > 0" class="in-stock">✅ Disponible ({{producto.Stock}})</span>
+        <span *ngIf="producto.Stock === 0" class="out-stock">❌ Agotado</span>
+      </div>
+
+      <div class="action-buttons">
+        <button class="btn-back" routerLink="/catalogo">
+          ↩ Volver
+        </button>
+        
+        <button class="btn-buy" (click)="agregarAlCarrito()" [disabled]="producto.Stock === 0 || agregando">
+          {{ agregando ? 'Agregando...' : '🛒 Agregar al carrito' }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="reviews-section" *ngIf="!cargando && producto">
+    <h2>Opiniones de los clientes</h2>
+    
+    <div class="write-review">
+      <h4>Deja tu opinión</h4>
+      <div class="fake-stars">☆☆☆☆☆</div>
+      <textarea placeholder="Escribe aquí tu experiencia con el producto..."></textarea>
+      <button class="btn-publish" disabled title="Próximamente">Publicar Reseña</button>
+    </div>
+
+    <div class="review-item">
+      <div class="user-avatar">👤</div>
+      <div class="review-content">
+        <div class="review-header">
+          <strong>Usuario Ejemplo</strong>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p>Excelente producto, llegó muy rápido y funciona perfecto para jugar y programar.</p>
+        <span class="date">Publicado el 08/12/2025</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-inferior></app-inferior>

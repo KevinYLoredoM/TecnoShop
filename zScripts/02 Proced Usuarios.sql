@@ -16,8 +16,6 @@ begin
 	insert into usuarios(usu_nombres,usu_apellidos,usu_correo,usu_contrasena,usu_telefono,usu_rolId)
 	values(@nombres,@apellidos,@correo,@contrasena,@telefono,@rolUsuario)
 end
-
-exec sp_usuariosADD 'Super', 'Admin', 'Admin@hotmail.com', 'Admin123', '6871589327', 1
 -------------------------------------------------------------------------------------------------
 --este procedimento actualizara la contraseña de un usuario buscandolo por el correo electronico
 create procedure sp_usuariosContrasenaUPDATE

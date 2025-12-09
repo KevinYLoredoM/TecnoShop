@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms'; 
-import { RouterModule } from '@angular/router';
+import { RouterModule, ActivatedRoute } from '@angular/router'; // <--- IMPORTAR ActivatedRoute
 import { ProductoService } from '../../Service/productos.service';
 import { Producto } from '../../Models/models';
 import { InferiorComponent } from '../../Navbar/inferior/inferior.component';
@@ -17,9 +17,9 @@ import { SuperiorComponent } from '../../Navbar/superior/superior.component';
 export class HomeComponent implements OnInit {
   
   private productoService = inject(ProductoService);
+  private route = inject(ActivatedRoute);
   
-  // ⚠️ CAMBIA ESTO POR EL PUERTO REAL DE TU API
-  private apiUrlBase = 'https://localhost:44308';
+  private apiUrlBase = 'https://localhost:44308'; 
 
   productos: Producto[] = [];
   categorias: string[] = [];
@@ -32,10 +32,22 @@ export class HomeComponent implements OnInit {
   cargando: boolean = true;
 
   ngOnInit(): void {
-    this.cargarProductos();
+    // Escuchar cambios en la URL (Búsqueda desde el Navbar)
+    this.route.queryParams.subscribe(params => {
+      const busqueda = params['buscar'];
+      
+      if (busqueda) {
+        // Si hay algo en la URL, filtramos
+        this.filtroTexto = busqueda;
+        this.aplicarFiltros();
+      } else {
+        // Si no hay búsqueda, cargamos todo normal
+        this.filtroTexto = '';
+        this.cargarProductos();
+      }
+    });
   }
 
-  // ... (Tus funciones de cargarProductos, extraerFiltros, aplicarFiltros quedan IGUAL) ...
   cargarProductos() {
     this.cargando = true;
     this.productoService.getProductos().subscribe({
@@ -90,6 +102,10 @@ export class HomeComponent implements OnInit {
     this.filtroTexto = '';
     this.categoriaSeleccionada = '';
     this.marcaSeleccionada = '';
-    this.cargarProductos();
+    
+    // Limpiamos también la URL para que no vuelva a filtrar
+    // Esto quita el ?buscar=... de la barra de direcciones
+    // Necesitas inyectar Router también si quieres hacer esto, pero cargarProductos() funciona visualmente
+    this.cargarProductos(); 
   }
 }
