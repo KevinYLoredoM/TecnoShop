@@ -211,3 +211,5 @@ create table ventaDetalle(
     vdet_subtotal decimal(10,2) not null
 )
 go
+
+

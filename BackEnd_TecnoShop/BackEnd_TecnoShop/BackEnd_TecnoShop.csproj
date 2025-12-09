@@ -162,6 +162,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\CarritoController.cs" />
+    <Compile Include="Controllers\DireccionesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PagosController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
@@ -173,7 +174,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ClsCarrito.cs" />
+    <Compile Include="Models\ClsDirecciones.cs" />
     <Compile Include="Models\ClsGestorCarrito.cs" />
+    <Compile Include="Models\ClsGestorDirecciones.cs" />
     <Compile Include="Models\ClsGestorProductos.cs" />
     <Compile Include="Models\ClsGestorResenas.cs" />
     <Compile Include="Models\ClsGestorUsuarios.cs" />

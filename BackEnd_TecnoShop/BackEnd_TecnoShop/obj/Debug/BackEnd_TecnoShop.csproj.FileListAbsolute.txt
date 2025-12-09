@@ -433,3 +433,7 @@ C:\Users\kevin\OneDrive\Escritorio\School\7mo Semestre\Comercio Electronico\Tecn
 C:\Users\kevin\OneDrive\Escritorio\School\7mo Semestre\Comercio Electronico\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\obj\Debug\BackEnd_.11C77E5D.Up2Date
 C:\Users\kevin\OneDrive\Escritorio\School\7mo Semestre\Comercio Electronico\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\obj\Debug\BackEnd_TecnoShop.dll
 C:\Users\kevin\OneDrive\Escritorio\School\7mo Semestre\Comercio Electronico\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\obj\Debug\BackEnd_TecnoShop.pdb
+C:\Users\felix\OneDrive\Escritorio\proyecto\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\felix\OneDrive\Escritorio\proyecto\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\bin\Stripe.net.dll
+C:\Users\felix\OneDrive\Escritorio\proyecto\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\felix\OneDrive\Escritorio\proyecto\TecnoShop\BackEnd_TecnoShop\BackEnd_TecnoShop\bin\Stripe.net.xml

@@ -71,6 +71,76 @@ namespace BackEnd_TecnoShop.Models
 
             return exito;
         }
+        public List<ClsVenta> MostrarVentasPorUsuario(int usuId)
+        {
+            string strconn = ConfigurationManager.ConnectionStrings["BDLocal"].ToString();
+
+            List<ClsVenta> listaVentas = new List<ClsVenta>();
+
+            using (SqlConnection conn = new SqlConnection(strconn))
+            {
+                SqlCommand cmd = new SqlCommand("sp_mostrarVentasPorUsuario", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@usuId", usuId);
+
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                // Diccionario para evitar duplicados y agrupar detalles
+                Dictionary<int, ClsVenta> dictVentas = new Dictionary<int, ClsVenta>();
+
+                while (reader.Read())
+                {
+                    int venId = Convert.ToInt32(reader["ven_id"]);
+
+                    ClsVenta venta;
+                    if (!dictVentas.ContainsKey(venId))
+                    {
+                        venta = new ClsVenta
+                        {
+                            ven_id = venId,
+                            ven_fechaVenta = Convert.ToDateTime(reader["ven_fechaVenta"]),
+                            ven_total = Convert.ToDecimal(reader["ven_total"]),
+                            ven_subtotal = Convert.ToDecimal(reader["ven_subtotal"]),
+                            ven_impuestos = Convert.ToDecimal(reader["ven_impuestos"]),
+
+                            usu_nombre = reader["usu_nombres"].ToString(),
+                            usu_correo = reader["usu_correo"].ToString(),
+
+                            dir_calle = reader["dir_calle"].ToString(),
+                            dir_codigoPostal = reader["dir_codigoPostal"].ToString(),
+
+                            MetodoPago = reader["MetodoPago"].ToString(),
+                            EstadoVenta = reader["EstadoVenta"].ToString()
+                        };
+
+                        dictVentas.Add(venId, venta);
+                        listaVentas.Add(venta);
+                    }
+                    else
+                    {
+                        venta = dictVentas[venId];
+                    }
+
+                    // Agregar detalle de producto
+                    VentaDetalle detalle = new VentaDetalle
+                    {
+                        vdet_proId = Convert.ToInt32(reader["vdet_proId"]),
+                        pro_nombre = reader["pro_nombre"].ToString(),
+                        vdet_cantidad = Convert.ToInt32(reader["vdet_cantidad"]),
+                        vdet_precioUnitario = Convert.ToDecimal(reader["vdet_precioUnitario"]),
+                        vdet_subtotal = Convert.ToDecimal(reader["vdet_subtotal"])
+                    };
+
+                    venta.Detalles.Add(detalle);
+                }
+
+                reader.Close();
+            }
+
+            return listaVentas;
+        }
+
 
     }
 }

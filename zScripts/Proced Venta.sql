@@ -44,3 +44,39 @@ BEGIN
     );
 END;
 GO
+
+------------------------------------------------------
+CREATE PROCEDURE sp_mostrarVentasPorUsuario
+    @usuId INT
+AS
+BEGIN
+    SELECT 
+        v.ven_id,
+        v.ven_fechaVenta,
+        v.ven_total,
+        v.ven_subtotal,
+        v.ven_impuestos,
+        u.usu_nombres,
+        u.usu_correo,
+        d.dir_calle,
+        d.dir_codigoPostal,
+        mp.mp_nombre AS MetodoPago,
+        ev.est_nombre AS EstadoVenta,
+        vd.vdet_proId,
+        p.pro_nombre,
+        vd.vdet_cantidad,
+        vd.vdet_precioUnitario,
+        vd.vdet_subtotal
+    FROM ventas v
+    INNER JOIN usuarios u ON v.ven_usuId = u.usu_id
+    INNER JOIN direcciones d ON v.ven_dirEnvioId = d.dir_id
+    INNER JOIN metodoPago mp ON v.ven_mpId = mp.mp_id
+    INNER JOIN estadoVenta ev ON v.ven_estadoId = ev.est_id
+    INNER JOIN ventaDetalle vd ON vd.vdet_venId = v.ven_id
+    INNER JOIN productos p ON vd.vdet_proId = p.pro_id
+    WHERE v.ven_usuId = @usuId
+    ORDER BY v.ven_fechaVenta DESC;
+END;
+GO
+
+exec sp_mostrarVentasPorUsuario 6

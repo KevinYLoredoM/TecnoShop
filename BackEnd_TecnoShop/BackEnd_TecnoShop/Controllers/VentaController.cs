@@ -21,10 +21,12 @@ namespace BackEnd_TecnoShop.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Venta/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("api/ventas/usuario/{usuId}")]
+        public IHttpActionResult MostrarVentasUsuario(int usuId)
         {
-            return "value";
+            var ventas = gestor.MostrarVentasPorUsuario(usuId);
+            return Ok(ventas);
         }
 
         [HttpPost]
