@@ -2,36 +2,38 @@
 USE BDTecnoShop
 
 
-CREATE PROC Productos_All
+CREATE OR ALTER PROC Productos_All
     @Categoria VARCHAR(150) = NULL,
-	@Marca VARCHAR(150) = NULL,
-	@Nombre VARCHAR(150) = NULL
+    @Marca VARCHAR(150) = NULL,
+    @Nombre VARCHAR(150) = NULL
 AS
 BEGIN
-	SELECT 
-		p.pro_id AS ID,
-		p.pro_nombre AS Nombre,
-		p.pro_descripcion AS Descripcion,
-		p.pro_especificaciones AS Especificaciones,
-		p.pro_precioVenta AS PrecioVenta,
-		p.pro_precioCompra AS PrecioCompra,
-		p.pro_stock AS Stock,
-		p.pro_catId AS CategoriaId,
-		Cat.cat_nombre AS Categoria,
-		p.pro_activo AS Activo,
-		p.pro_marId AS MarcaId,
-		m.mar_nombre AS Marca,
+    SET NOCOUNT ON; -- Recomendado para evitar mensajes de "filas afectadas"
+
+    SELECT 
+        p.pro_id AS ID,
+        p.pro_nombre AS Nombre,
+        p.pro_descripcion AS Descripcion,
+        p.pro_especificaciones AS Especificaciones,
+        p.pro_precioVenta AS PrecioVenta,
+        p.pro_precioCompra AS PrecioCompra,
+        p.pro_stock AS Stock,
+        p.pro_catId AS CategoriaId,
+        Cat.cat_nombre AS Categoria,
+        p.pro_activo AS Activo,
+        p.pro_marId AS MarcaId,
+        m.mar_nombre AS Marca,
         m.mar_logoUrl AS LogoUrl,
-		p.pro_imgUrl AS ImgUrl
-		
-	FROM productos p
-	LEFT JOIN categorias Cat ON p.pro_catId = Cat.cat_id
-	LEFT JOIN marcas m ON p.pro_marId = m.mar_id
-	WHERE
-    (@Nombre IS NULL OR p.pro_nombre LIKE '%' + @Nombre + '%') AND
-    (@Categoria IS NULL OR Cat.cat_nombre LIKE '%' + @Categoria + '%') AND
-    (@Marca IS NULL OR m.mar_nombre LIKE '%' + @Marca + '%')
-	ORDER BY p.pro_id ASC;
+        p.pro_imgUrl AS ImgUrl
+    FROM productos p
+    LEFT JOIN categorias Cat ON p.pro_catId = Cat.cat_id
+    LEFT JOIN marcas m ON p.pro_marId = m.mar_id
+    WHERE
+        p.pro_activo = 1  -- <-- Aquí se agregó la condición para filtrar solo activos
+        AND (@Nombre IS NULL OR p.pro_nombre LIKE '%' + @Nombre + '%')
+        AND (@Categoria IS NULL OR Cat.cat_nombre LIKE '%' + @Categoria + '%')
+        AND (@Marca IS NULL OR m.mar_nombre LIKE '%' + @Marca + '%')
+    ORDER BY p.pro_id ASC;
 END;
 
 

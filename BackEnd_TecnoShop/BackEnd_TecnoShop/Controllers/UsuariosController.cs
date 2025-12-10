@@ -80,10 +80,10 @@ namespace BackEnd_TecnoShop.Controllers
         // PUT: api/Usuarios/5
         [HttpPut]
         [Route("api/usuarios/update")]
-        public bool Put(int id, [FromBody] ClsUsuarios usuarios)
+        public bool Put([FromBody] ClsUsuarios usuarios)
         {
             ClsGestorUsuarios GesUsuarios = new ClsGestorUsuarios();
-            bool res = GesUsuarios.UpdateProductos(id, usuarios);
+            bool res = GesUsuarios.UpdateUsuarios(usuarios);
 
             return res;
         }

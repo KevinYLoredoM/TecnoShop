@@ -1,5 +1,116 @@
 <app-superior></app-superior>
-<br>
-<p>admin-productos works!</p>
-<br>
+
+<div class="admin-container">
+  
+  <div class="header-actions">
+    <h1>Gestión de Productos</h1>
+    <button class="btn-add" (click)="abrirModal()">
+      + Nuevo Producto
+    </button>
+  </div>
+
+  <div class="table-container">
+    <table class="prod-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagen</th>
+          <th>Nombre</th>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of productos">
+          <td>{{ prod.Id }}</td>
+          <td>
+            <img [src]="prod.ImgUrl[0] || 'assets/no-image.png'" class="thumb">
+          </td>
+          <td>{{ prod.Nombre }}</td>
+          <td>{{ prod.Marca }}</td>
+          <td>{{ prod.PrecioVenta | currency:'MXN' }}</td>
+          <td>
+            <span [class.low-stock]="prod.Stock < 5" [class.ok-stock]="prod.Stock >= 5">
+              {{ prod.Stock }}
+            </span>
+          </td>
+          <td class="actions">
+            <button class="btn-edit" (click)="abrirModal(prod)">✏️</button>
+            <button class="btn-delete" (click)="eliminar(prod.Id)">🗑️</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal-backdrop" *ngIf="mostrarModal">
+    <div class="modal-content">
+      <h2>{{ esEdicion ? 'Editar Producto' : 'Nuevo Producto' }}</h2>
+      
+      <form [formGroup]="productoForm" (ngSubmit)="guardarProducto()">
+        
+        <div class="form-grid">
+          <div class="form-group span-2">
+            <label>Nombre del Producto</label>
+            <input type="text" formControlName="Nombre">
+          </div>
+
+          <div class="form-group span-2">
+            <label>Descripción Corta</label>
+            <input type="text" formControlName="Descripcion">
+          </div>
+
+          <div class="form-group">
+            <label>Precio Compra</label>
+            <input type="number" formControlName="PrecioCompra">
+          </div>
+
+          <div class="form-group">
+            <label>Precio Venta</label>
+            <input type="number" formControlName="PrecioVenta">
+          </div>
+
+          <div class="form-group">
+            <label>Stock</label>
+            <input type="number" formControlName="Stock">
+          </div>
+
+          <div class="form-group">
+            <label>Marca</label>
+            <select formControlName="MarcaId">
+              <option *ngFor="let m of listaMarcas" [value]="m.id">{{ m.nombre }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Categoría</label>
+            <select formControlName="CategoriaId">
+              <option *ngFor="let c of listaCategorias" [value]="c.id">{{ c.nombre }}</option>
+            </select>
+          </div>
+
+          <div class="form-group span-2">
+            <label>Nombres de Imágenes (Separados por coma)</label>
+            <textarea formControlName="ImgUrlString" placeholder="laptop1.jpg, laptop2.jpg"></textarea>
+            <small>Asegúrate de que estas imágenes existan en tu carpeta de API</small>
+          </div>
+
+          <div class="form-group span-2">
+            <label>Especificaciones Técnicas</label>
+            <textarea formControlName="Especificaciones" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" (click)="cerrarModal()">Cancelar</button>
+          <button type="submit" class="btn-save" [disabled]="productoForm.invalid">Guardar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</div>
 <app-inferior></app-inferior>

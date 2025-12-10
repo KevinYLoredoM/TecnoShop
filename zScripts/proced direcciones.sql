@@ -1,4 +1,4 @@
-alter PROCEDURE sp_agregarDireccion
+CREATE PROCEDURE sp_agregarDireccion
     @dir_usuId INT,
     @dir_calle VARCHAR(100),
     @dir_codigoPostal VARCHAR(10),

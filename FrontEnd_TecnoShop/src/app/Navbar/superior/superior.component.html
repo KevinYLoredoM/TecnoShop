@@ -22,8 +22,9 @@
     <ng-container *ngIf="esAdmin">
       <a routerLink="/catalogo" routerLinkActive="active">Inicio</a>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/admin-resenas" routerLinkActive="active">Reseñas</a>
       <a routerLink="/admin-productos" routerLinkActive="active">Productos</a>
-      <a routerLink="/admin-perfil" routerLinkActive="active">Perfil</a>
+      <a routerLink="/perfil" routerLinkActive="active" class="desktop-only">Perfil</a>
     </ng-container>
     <ng-container *ngIf="esCliente">
       <a routerLink="/catalogo" routerLinkActive="active" class="desktop-only">Inicio</a>

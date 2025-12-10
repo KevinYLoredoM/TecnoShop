@@ -104,7 +104,7 @@ namespace BackEnd_TecnoShop.Models
 
             return null;
         }
-        public bool UpdateProductos(int IdProducto, ClsUsuarios usuarios)
+        public bool UpdateUsuarios(ClsUsuarios usuarios)
         {
             bool res = false;
             using (SqlConnection conn = new SqlConnection(strconn))

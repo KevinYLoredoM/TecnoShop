@@ -12,33 +12,31 @@ export class ProductoService {
   private apiUrl = 'https://localhost:44308/api/Productos';
   private http = inject(HttpClient);
 
-  // Obtener todos
   getProductos(): Observable<Producto[]> {
     return this.http.get<Producto[]>(this.apiUrl);
   }
 
-  // Filtrar (Conecta con [HttpGet] Route("api/Productos/Filtro"))
   filtrarProductos(categoria: string, marca: string, nombre: string): Observable<Producto[]> {
     let params = new HttpParams();
-    
-    // Validamos para no enviar 'undefined'
     if (categoria) params = params.set('Categoria', categoria);
     if (marca) params = params.set('Marca', marca);
     if (nombre) params = params.set('Nombre', nombre);
-
     return this.http.get<Producto[]>(`${this.apiUrl}/Filtro`, { params });
   }
 
-  // Agrega este método a tu ProductoService existente
-  getProductoById(id: number): Observable<Producto> {
-  // Como tu API actual devuelve TODOS, filtramos en el cliente por ahora.
-  // Lo ideal sería tener un endpoint api/productos/{id} en el backend.
-    return this.http.get<Producto[]>('https://localhost:44308/api/Productos').pipe(
-      map((productos: Producto[]) => {
-        const encontrado = productos.find(p => p.Id == id);
-        if (!encontrado) throw new Error('Producto no encontrado');
-        return encontrado;
-      })
-    );
+  // --- NUEVOS MÉTODOS CRUD ---
+
+  registrarProducto(producto: Producto): Observable<any> {
+    return this.http.post(`${this.apiUrl}/Registrar`, producto);
+  }
+
+  actualizarProducto(producto: Producto): Observable<any> {
+    return this.http.put(`${this.apiUrl}/Update`, producto);
+  }
+
+  eliminarProducto(id: number): Observable<any> {
+    // Enviamos el ID como parámetro query: api/Productos/Delete?id=5
+    let params = new HttpParams().set('id', id);
+    return this.http.delete(`${this.apiUrl}/Delete`, { params });
   }
 }

@@ -44,21 +44,21 @@ namespace BackEnd_TecnoShop.Controllers
         // PUT: api/Productos/5
         [HttpPut]
         [Route("api/Productos/Update")]
-        public bool Put(int id, [FromBody] ClsProductos productos)
+        public bool Put([FromBody] ClsProductos productos)
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
-            bool res = GesProductos.UpdateProductos(id, productos);
+            bool res = GesProductos.UpdateProductos(productos);
 
             return res;
         }
+
+        // DELETE: api/Productos/5
         [HttpDelete]
         [Route("api/Productos/Delete")]
-        // DELETE: api/Productos/5
         public bool Delete(int id)
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
             bool res = GesProductos.DeleteProductos(id);
-
             return res;
         }
     }

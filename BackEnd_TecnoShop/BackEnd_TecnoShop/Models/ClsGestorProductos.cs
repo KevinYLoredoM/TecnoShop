@@ -103,7 +103,14 @@ namespace BackEnd_TecnoShop.Models
                 cmd.Parameters.AddWithValue("@Stock", productos.Stock);
                 cmd.Parameters.AddWithValue("@CategoriaId", productos.CategoriaId);
                 cmd.Parameters.AddWithValue("@MarcaId", productos.MarcaId);
-                cmd.Parameters.AddWithValue("@ImgUrl", productos.ImgUrl);
+
+                string imagenesTexto = "";
+                if (productos.ImgUrl != null && productos.ImgUrl.Count > 0)
+                {
+                    imagenesTexto = string.Join(",", productos.ImgUrl);
+                }
+
+                cmd.Parameters.AddWithValue("@ImgUrl", imagenesTexto);
 
                 try
                 {
@@ -127,7 +134,7 @@ namespace BackEnd_TecnoShop.Models
         }
 
 
-        public bool UpdateProductos(int IdProducto, ClsProductos productos)
+        public bool UpdateProductos(ClsProductos productos)
         {
             bool res = false;
             using (SqlConnection conn = new SqlConnection(Strconn))
@@ -137,11 +144,18 @@ namespace BackEnd_TecnoShop.Models
                 cmd.CommandText = "Productos_Update";
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ProductoId", IdProducto);
+                cmd.Parameters.AddWithValue("@ProductoId", productos.Id);
                 cmd.Parameters.AddWithValue("@Nombre", productos.Nombre);
                 cmd.Parameters.AddWithValue("@Descripcion", productos.Descripcion);
                 cmd.Parameters.AddWithValue("@Especificaciones", productos.Especificaciones);
-                cmd.Parameters.AddWithValue("@ImgUrl", productos.ImgUrl);
+
+                string imagenesTexto = "";
+                if (productos.ImgUrl != null && productos.ImgUrl.Count > 0)
+                {
+                    imagenesTexto = string.Join(",", productos.ImgUrl);
+                }
+
+                cmd.Parameters.AddWithValue("@ImgUrl", imagenesTexto);
 
                 try
                 {

@@ -1,0 +1,76 @@
+<app-superior></app-superior>
+
+<div class="admin-container">
+  <h1>Gestión de Reseñas</h1>
+  <p class="subtitle">Visualiza y responde los comentarios de tus clientes.</p>
+
+  <div class="loading" *ngIf="cargando">Cargando reseñas...</div>
+
+  <div class="table-responsive" *ngIf="!cargando">
+    <table class="resenas-table">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Usuario</th>
+          <th>Calificación</th>
+          <th width="30%">Comentario</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let res of listaResenas">
+          <td>
+            <strong>{{ res.nombreProducto }}</strong>
+            <br><small>{{ res.fecha | date:'shortDate' }}</small>
+          </td>
+          <td>{{ res.nombreUsuario }}</td> <td>
+            <span class="stars">
+              <span *ngFor="let s of [1,2,3,4,5]" [class.gold]="s <= res.calificacion">★</span>
+            </span>
+          </td>
+          <td>
+            <p class="comment-text">"{{ res.comentario }}"</p>
+            <div class="admin-reply" *ngIf="res.respuesta">
+              <strong>Tu respuesta:</strong> {{ res.respuesta }}
+            </div>
+          </td>
+          <td>
+            <span class="badge" [class.pending]="!res.respuesta" [class.answered]="res.respuesta">
+              {{ res.respuesta ? 'Respondido' : 'Pendiente' }}
+            </span>
+          </td>
+          <td>
+            <button class="btn-reply" (click)="abrirResponder(res)">
+              {{ res.respuesta ? 'Editar' : 'Responder' }}
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="modal-overlay" *ngIf="mostrarModal">
+    <div class="modal-content">
+      <h3>Responder a {{ resenaSeleccionada?.nombre }}</h3>
+      
+      <div class="original-comment">
+        <small>El cliente dijo:</small>
+        <p>"{{ resenaSeleccionada?.comentario }}"</p>
+      </div>
+
+      <textarea 
+        [(ngModel)]="textoRespuesta" 
+        placeholder="Escribe tu respuesta cordial aquí..."
+        rows="4"></textarea>
+
+      <div class="modal-actions">
+        <button class="btn-cancel" (click)="cerrarModal()">Cancelar</button>
+        <button class="btn-send" (click)="enviarRespuesta()" [disabled]="enviando || !textoRespuesta">
+          {{ enviando ? 'Enviando...' : 'Enviar Respuesta' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-inferior></app-inferior>

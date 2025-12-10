@@ -26,6 +26,16 @@ export class AuthService {
     const body = { correo, contrasena };
     return this.http.post<Usuario>(`${this.apiUrl}/Login`, body);
   }
+  actualizarUsuario(usuario: Usuario): Observable<any> {
+    // Nota: El endpoint en tu controlador C# se llama "update"
+    return this.http.put(`${this.apiUrl}/update`, usuario);
+  }
+  actualizarSesionLocal(usuario: Usuario) {
+    if (isPlatformBrowser(this.platformId)) {
+      // Sobreescribimos los datos viejos con los nuevos
+      localStorage.setItem('usuarioSesion', JSON.stringify(usuario));
+    }
+  }
 
   guardarSesion(usuario: Usuario) {
     if (isPlatformBrowser(this.platformId)) {

@@ -15,10 +15,23 @@ namespace BackEnd_TecnoShop.Controllers
     {
         ClsGestorResenas gestor = new ClsGestorResenas();
 
-        // GET: api/Resena
-        public IEnumerable<string> Get()
+        // GET: api/resena/todas
+        [HttpGet]
+        [Route("api/resena/todas")]
+        public IEnumerable<ClsResenas> GetTodas()
         {
-            return new string[] { "value1", "value2" };
+            return gestor.GetTodasLasResenas();
+        }
+
+        // PUT: api/resena/responder
+        [HttpPut]
+        [Route("api/resena/responder")]
+        public IHttpActionResult Responder([FromBody] ClsResenas resena)
+        {
+            // Usamos idResena y respuesta del objeto
+            bool exito = gestor.ResponderResena(resena.idResena, resena.respuesta, resena.usuId);
+            if (exito) return Ok(new { mensaje = "Respuesta guardada" });
+            return BadRequest("Error al guardar respuesta");
         }
 
         // GET: api/resena/5
@@ -62,11 +75,6 @@ namespace BackEnd_TecnoShop.Controllers
             {
                 return InternalServerError(ex);
             }
-        }
-
-        // PUT: api/Resena/5
-        public void Put(int id, [FromBody]string value)
-        {
         }
 
         // DELETE: api/Resena/5

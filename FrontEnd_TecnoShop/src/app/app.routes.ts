@@ -14,8 +14,8 @@ import { DashboardComponent } from './PagesAdmin/dashboard/dashboard.component';
 import { CarritoComponent } from './PagesLogeado/carrito/carrito.component';
 import { PerfilComponent } from './PagesLogeado/perfil/perfil.component';
 import { AdminProductosComponent } from './PagesAdmin/admin-productos/admin-productos.component';
-import { AdminPerfilComponent } from './PagesAdmin/admin-perfil/admin-perfil.component';
 import { DetalleProductoComponent } from './PagesLogeado/detalle-producto/detalle-producto.component';
+import { AdminResenasComponent } from './PagesAdmin/admin-resenas/admin-resenas.component';
 
 export const routes: Routes = [
     {
@@ -48,7 +48,7 @@ export const routes: Routes = [
         component: PerfilComponent,
         title: 'TecnoShop - Mi Perfil',
         canActivate: [AuthGuard],
-        data: { roles: [2] }
+        data: { roles: [2, 1] }
     },
     {
         path: 'carrito',
@@ -81,9 +81,9 @@ export const routes: Routes = [
         data: { roles: [1] }
     },
     {
-        path: 'admin-perfil',
-        component: AdminPerfilComponent,
-        title: 'Admin - Perfil',
+        path: 'admin-resenas',
+        component: AdminResenasComponent,
+        title: 'Admin - Reseñas',
         canActivate: [AuthGuard],
         data: { roles: [1] }
     },

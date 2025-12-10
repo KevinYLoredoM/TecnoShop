@@ -14,6 +14,10 @@ namespace BackEnd_TecnoShop.Models
         public string comentario;
         public DateTime fecha;
         public string nombre;
+        public string nombreProducto;
+        public string respuesta;
+        public DateTime? fechaRespuesta;
+        public string nombreUsuario;
 
         public ClsResenas() { }
 

@@ -21,8 +21,10 @@
       <h1 class="prod-title">{{ producto.Nombre }}</h1>
       
       <div class="rating-box">
-        <span class="stars">★★★★☆</span>
-        <span class="text">(4.5) basado en reseñas</span>
+        <ng-container *ngFor="let s of [1,2,3,4,5]">
+            <span class="stars" [class.filled]="s <= promedioCalificacion">★</span>
+        </ng-container>
+        <span class="text">({{promedioCalificacion | number:'1.1-1'}}) basado en {{ listaResenas.length }} reseñas</span>
       </div>
 
       <div class="price-tag">
@@ -45,9 +47,7 @@
       </div>
 
       <div class="action-buttons">
-        <button class="btn-back" routerLink="/catalogo">
-          ↩ Volver
-        </button>
+        <button class="btn-back" routerLink="/catalogo">↩ Volver</button>
         
         <button class="btn-buy" (click)="agregarAlCarrito()" [disabled]="producto.Stock === 0 || agregando">
           {{ agregando ? 'Agregando...' : '🛒 Agregar al carrito' }}
@@ -59,24 +59,70 @@
   <div class="reviews-section" *ngIf="!cargando && producto">
     <h2>Opiniones de los clientes</h2>
     
-    <div class="write-review">
+    <div class="write-review" *ngIf="authService.usuarioActual; else loginPrompt">
       <h4>Deja tu opinión</h4>
-      <div class="fake-stars">☆☆☆☆☆</div>
-      <textarea placeholder="Escribe aquí tu experiencia con el producto..."></textarea>
-      <button class="btn-publish" disabled title="Próximamente">Publicar Reseña</button>
+      <p class="subtext">Haz clic en las estrellas para calificar.</p>
+      
+      <div class="interactive-stars">
+        <span *ngFor="let s of [1,2,3,4,5]" 
+              class="star-btn" 
+              [class.active]="s <= calificacionNueva"
+              (click)="seleccionarEstrella(s)">
+          ★
+        </span>
+        <span class="rating-label" *ngIf="calificacionNueva > 0">{{ calificacionNueva }}/5</span>
+      </div>
+
+    <textarea 
+        placeholder="Escribe aquí tu experiencia con el producto..."
+        [(ngModel)]="comentarioNuevo"
+        rows="3">
+      </textarea>
+      
+      <button class="btn-publish" (click)="enviarResena()" [disabled]="enviandoResena">
+        {{ enviandoResena ? 'Publicando...' : 'Publicar Reseña' }}
+      </button>
     </div>
 
-    <div class="review-item">
-      <div class="user-avatar">👤</div>
-      <div class="review-content">
-        <div class="review-header">
-          <strong>Usuario Ejemplo</strong>
-          <span class="stars">★★★★★</span>
+    <ng-template #loginPrompt>
+      <div class="login-prompt">
+        <p>¿Quieres dejar tu opinión? <a routerLink="/login">Inicia sesión aquí</a></p>
+      </div>
+    </ng-template>
+
+    <hr class="divider">
+
+    <div class="reviews-list">
+      <div class="empty-reviews" *ngIf="listaResenas.length === 0">
+        <p>Aún no hay opiniones. ¡Sé el primero en comentar!</p>
+      </div>
+
+      <div class="review-item" *ngFor="let res of listaResenas">
+        <div class="user-avatar">
+          {{ res.nombre ? res.nombre.charAt(0).toUpperCase() : 'U' }}
         </div>
-        <p>Excelente producto, llegó muy rápido y funciona perfecto para jugar y programar.</p>
-        <span class="date">Publicado el 08/12/2025</span>
+        <div class="review-content">
+          <div class="review-header">
+            <strong>{{ res.nombre }}</strong>
+            <div class="static-stars">
+               <span *ngFor="let s of [1,2,3,4,5]" [class.gold]="s <= res.calificacion">★</span>
+            </div>
+          </div>
+          <p class="comentario-cliente">{{ res.comentario }}</p>
+          <span class="date">Publicado el {{ res.fecha | date:'dd/MM/yyyy h:mm a' }}</span>
+          
+          <div class="admin-reply-box" *ngIf="res.respuesta">
+            <div class="reply-header">
+              <span class="badge-admin">Soporte TecnoShop</span>
+              <span class="reply-date">{{ res.fechaRespuesta | date:'dd/MM/yyyy' }}</span>
+            </div>
+            <p class="reply-text">{{ res.respuesta }}</p>
+            
+          </div>
+        </div>
       </div>
     </div>
+
   </div>
 
 </div>
